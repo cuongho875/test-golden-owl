@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('./components/AppCard/app_card.scss');
+@import url('./components/Product/product.scss');
+@import url('./components/CartItem/cart_item.scss');
+
+
+.App{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.App::before{
+    content: "";
+    display: block;
+    position: fixed;
+    width: 300%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    transform: translateX(-50%) skewY(-8deg);
+    background-color: #f6c90e;
+    z-index: -1;
+    -webkit-animation: wave 8s ease-in-out infinite alternate;
+    animation: wave 8s ease-in-out infinite alternate;
+    }
+    @media only screen and (max-width: 768px) {
+        .App{
+            justify-content: center;
+        }
+      }
+      @keyframes wave {
+        0% {
+          transform: scale(1.5);
+        //   opacity: 1;
+        }
+        100% {
+          transform: scale(1.6);
+        //   opacity: 0;
+        }
+      }
